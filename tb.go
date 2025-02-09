@@ -31,9 +31,12 @@ func main() {
 
 	}
 
-	fmt.Println("repetitons of the test:", repetitons)
-	fmt.Println("wins with Switching strategy:", winsSwitch)
-	fmt.Println("wins with Keeping strategy:", winsKeep)
+	fmt.Println("Repetitons of the test:", repetitons)
+	fmt.Println("Wins with Switching strategy:", winsSwitch)
+	fmt.Println("Wins with Keeping strategy:", winsKeep)
+	fmt.Println()
+	fmt.Println("Switching strategy win rate:", float64(winsSwitch)*100/float64(repetitons), "%")
+	fmt.Println("Keeping strategy win rate:", float64(winsKeep)*100/float64(repetitons), "%")
 }
 
 type Boxes struct {
