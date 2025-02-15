@@ -8,7 +8,7 @@ import (
 func main() {
 	winsSwitch := 0
 	winsKeep := 0
-	repetitons := 10
+	repetitons := 9999
 	for i := 0; i < repetitons; i++ {
 		b := createBoxes()
 		// choose a random box
