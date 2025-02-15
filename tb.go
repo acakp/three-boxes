@@ -8,7 +8,7 @@ import (
 func main() {
 	winsSwitch := 0
 	winsKeep := 0
-	repetitons := 9999
+	repetitons := 10
 	for i := 0; i < repetitons; i++ {
 		b := createBoxes()
 		// choose a random box
@@ -17,10 +17,13 @@ func main() {
 		switch choice {
 		case 0:
 			chosenBox = b.FirstBox
+			fmt.Println(" ^         ")
 		case 1:
 			chosenBox = b.SecondBox
+			fmt.Println("     ^     ")
 		case 2:
 			chosenBox = b.ThirdBox
+			fmt.Println("         ^ ")
 		}
 
 		if chosenBox {
@@ -57,14 +60,17 @@ func createBoxes() Boxes {
 		boxes.FirstBox = true
 		boxes.SecondBox = false
 		boxes.ThirdBox = false
+		fmt.Println("[o] [ ] [ ]")
 	case ar[1] == 2:
 		boxes.FirstBox = false
 		boxes.SecondBox = true
 		boxes.ThirdBox = false
+		fmt.Println("[ ] [o] [ ]")
 	case ar[2] == 2:
 		boxes.FirstBox = false
 		boxes.SecondBox = false
 		boxes.ThirdBox = true
+		fmt.Println("[ ] [ ] [o]")
 	}
 	return boxes
 }
